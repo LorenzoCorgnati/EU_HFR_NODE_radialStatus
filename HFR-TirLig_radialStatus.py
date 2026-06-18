@@ -11,10 +11,10 @@
 # The application first checks in the radial_delay_tb of the EU HFR NODE database if there are delays larger 
 # than the input threshold in the synchronization of the radial files from the measurement sites. 
 # If no synchronization delay occurs for a specific station, the application checks how many radial files were 
-# synchronized in the last 24 hours with a number of radial velocity vectors lower than the Radial Count QC test threshold
+# synchronized in the last defined number of hours with a number of radial velocity vectors lower than the Radial Count QC test threshold
 # set for that station. This check is performed by querying the radial_input_tb of the EU HFR NODE database.
 # If, for any station, a synchronization delay occurs or files with a critically low number of velocity vectors were 
-# synchronized in the last 24 hours, a mail containing these critical status information is sent to the contact email
+# synchronized in the last defined number of hours, a mail containing these critical status information is sent to the contact email
 # reported in the EU HFR NODE database.
 
 # When calling the application it is possible to specify the synchronization delay which triggers the email notification.
