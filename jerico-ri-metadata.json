@@ -1,0 +1,43 @@
+{
+    "_class": "Software",
+    "alias": "https://github.com/LorenzoCorgnati/EU_HFR_NODE_radialStatus",
+    "abstract": "Python3 scripts for checking and reporting the status of the radial data availability for the HFR stations connected to the the European HFR Node (EU HFR Node).",
+    "author": {
+        "_class": "Organization",
+        "alias": "https://edmo.seadatanet.org/report/134"
+    },
+    "created": "2026-06-16",
+    "contributor": [
+        {
+            "_class": "Person",
+            "name": "Lorenzo Corgnati <lorenzopaolo.corgnati@cnr.it>"
+        }
+    ],
+    "description": "Python3 scripts for checking and reporting the status of the radial data availability for the HFR stations connected to the the European HFR Node (EU HFR Node). The application first checks in the radial_delay_tb of the EU HFR NODE database if there are delays larger than the input threshold in the synchronization of the radial files from the measurement sites. If no synchronization delay occurs for a specific station, the application checks how many radial files were synchronized in the last number of hours with a number of radial velocity vectors lower than the Radial Count QC test threshold set for that station. This check is performed by querying the radial_input_tb of the EU HFR NODE database. If, for any station, a synchronization delay occurs or files with a critically low number of velocity vectors were synchronized in the last number of hours, a mail containing these critical status information is sent to the contact email reported in the EU HFR NODE database.",
+    "distribution": {
+        "_class": "Distribution",
+        "accessURL": "https://github.com/LorenzoCorgnati/EU_HFR_NODE_radialStatus"
+    },
+    "downloadURL": "https://github.com/LorenzoCorgnati/EU_HFR_NODE_radialStatus/archive/refs/heads/main.zip",
+    "keywords": ["python","netcdf","physical-oceanography","ocean-sciences","hf-radar","data-preservation","jerico-ri"],
+    "language": ["English"],
+    "license": "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.",
+    "modified": "2026-06-18",
+    "name": "EU_HFR_NODE_radialStatus",
+    "organization": {
+        "_class": "Organization",
+        "alias": "https://edmo.seadatanet.org/report/134"
+    },
+    "owner": {
+        "_class": "Organization",
+        "alias": "https://edmo.seadatanet.org/report/134"
+    },
+    "publisher": {
+        "_class": "Organization",
+        "alias": "https://edmo.seadatanet.org/report/134"
+    },
+    "published": "2026-06-18",
+    "programming_language": ["PYTHON"],
+    "url": "https://github.com/LorenzoCorgnati/EU_HFR_NODE_radialStatus",
+    "version": "v1.0"
+}
