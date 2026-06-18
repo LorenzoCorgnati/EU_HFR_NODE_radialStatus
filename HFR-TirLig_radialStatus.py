@@ -131,9 +131,17 @@ def sendAlertEmail(alertDF,networkData,delay,logger):
         msg.set_content(plainBody)
         msg.add_alternative(htmlBody,subtype="html")
 
+        logger.info('Alert email succesfully composed for the ' + networkData['network_id'].iloc[0] + ' network.')
+
+    #####
+    # Send the alert email
+    #####
+
         with smtplib.SMTP_SSL(smtpServer,smtpPort) as server:
             server.login(fromAddress,password)
             server.send_message(msg)
+
+        logger.info('Alert email succesfully sent for the ' + networkData['network_id'].iloc[0] + ' network.')
 
     except Exception as err:
         aeErr = True
@@ -355,6 +363,8 @@ def main(argv):
 
         if not alertDF.empty:
             EHNerr = sendAlertEmail(alertDF,networkData,delay,logger)
+        else:
+            logger.info('No critical synchronization delay or critically low number of velocity vectors detected for the ' + networkData['network_id'].iloc[0] + ' network. No alert email sent.')
         
     except Exception as err:
         EHNerr = True
